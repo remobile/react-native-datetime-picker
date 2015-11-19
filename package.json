@@ -1,0 +1,32 @@
+{
+    "name": "@remobile/react-native-datetime-picker",
+        "version": "1.0.0",
+        "description": "A datetime-picker for react-native support for android and ios",
+        "main": "index.js",
+        "author": {
+            "name": "YunJiang.Fang",
+            "email": "42550564@qq.com"
+        },
+        "license": "MIT",
+        "keywords": [
+            "react-native",
+            "react-component",
+            "ios",
+            "android",
+            "datetime-picker",
+            "picker",
+            "datetime",
+            "date",
+            "time",
+            "remobile",
+            "mobile"
+        ],
+        "homepage": "https://github.com/remobile/react-native-datetime-picker",
+        "bugs": {
+            "url": "https://github.com/remobile/react-native-datetime-picker/issues"
+        },
+        "repository": {
+            "type": "git",
+            "url": "git://github.com/remobile/react-native-datetime-picker.git"
+        }
+}
