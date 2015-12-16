@@ -6,7 +6,7 @@ var {
     NativeModules,
 } = React;
 
-var CRTDateTimePicker= NativeModules.DateTimePicker;
+var RCTDateTimePicker= NativeModules.DateTimePicker;
 
 
 
@@ -14,7 +14,7 @@ module.exports =  React.createClass({
     showDatePicker(date, callback) {
         date = date || new Date();
         var options = {year:date.getFullYear(), month:date.getMonth(), day:date.getDate()};
-        CRTDateTimePicker.showDatePicker(options, function (year, month, day) {
+        RCTDateTimePicker.showDatePicker(options, function (year, month, day) {
             date.setFullYear(year);
             date.setMonth(month);
             date.setDate(day);
@@ -24,7 +24,7 @@ module.exports =  React.createClass({
     showTimePicker(date, callback) {
         date = date || new Date();
         var options = {hour:date.getHours(), minute:date.getMinutes()};
-        CRTDateTimePicker.showTimePicker(options, function (hour, minute) {
+        RCTDateTimePicker.showTimePicker(options, function (hour, minute) {
             date.setHours(hour);
             date.setMinutes(minute);
             callback(date);

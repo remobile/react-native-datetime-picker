@@ -13,7 +13,7 @@ npm install react-native-datetime-picker --save
 ```gradle
 ...
 include ':react-native-datetime-picker'
-project(':react-native-datetime-picker').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-datetime-picker/android')
+project(':react-native-datetime-picker').projectDir = new File(rootProject.projectDir, '../node_modules/@remobile/react-native-datetime-picker/android')
 ```
 
 * In `android/app/build.gradle`
