@@ -30,7 +30,7 @@ module.exports =  React.createClass({
     showDatePicker(date, callback) {
         this.callback = callback;
         date = date || new Date();
-        
+
         this.setState({
             mode: 'date',
             visible: true,
@@ -62,10 +62,13 @@ module.exports =  React.createClass({
         this.setState({date: date});
     },
     render() {
-        return (
+        return this.state.visible && (
             <Overlay visible={this.state.visible}>
                 <View style={styles.actionSheetContainer}>
-                    <TouchableOpacity style={styles.touchableOpacity} activeOpacity={1} onPress={this.onClose} />
+                    <TouchableOpacity
+                        style={styles.touchableOpacity}
+                        activeOpacity={1}
+                        onPress={this.onClose} />
                     <DatePickerIOS
                         date={this.state.date}
                         mode={this.state.mode}
@@ -73,8 +76,13 @@ module.exports =  React.createClass({
                         style = {styles.datePicker}
                         />
                     <View style={styles.separator}/>
-                    <Button onPress={this.onComplete} style={styles.button}>完成</Button>
-                    <TouchableOpacity style={styles.touchableOpacity} activeOpacity={1} onPress={this.onClose} />
+                    <Button
+                        onPress={this.onComplete}
+                        style={styles.button}>完成</Button>
+                    <TouchableOpacity
+                        style={styles.touchableOpacity}
+                        activeOpacity={1}
+                        onPress={this.onClose} />
                 </View>
             </Overlay>
         );

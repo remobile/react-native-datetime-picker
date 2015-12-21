@@ -15,13 +15,12 @@ module.exports = React.createClass({
             fadeAnim: new Animated.Value(0),
         };
     },
-    componentWillReceiveProps(newProps) {
+    componentWillMount() {
         return Animated.timing(this.state.fadeAnim, {
-            toValue: newProps.visible ? 1 : 0,
+            toValue: this.props.visible ? 1 : 0,
             duration: DEFAULT_ANIMATE_TIME
         }).start();
     },
-
     render() {
         return (
             <Animated.View style={[styles.overlay, {opacity: this.state.fadeAnim}]}>
