@@ -30,6 +30,18 @@ module.exports =  React.createClass({
             callback(date);
         });
     },
+    showDateTimePicker(date, callback) {
+        date = date || new Date();
+        var options = {year:date.getFullYear(), month:date.getMonth(), day:date.getDate(), hour:date.getHours(), minute:date.getMinutes()};
+        RCTDateTimePicker.showDateTimePicker(options, function (year, month, day, hour, minute) {
+            date.setFullYear(year);
+            date.setMonth(month);
+            date.setDate(day);
+            date.setHours(hour);
+            date.setMinutes(minute);
+            callback(date);
+        });
+    },
     render() {
         return (
             null
