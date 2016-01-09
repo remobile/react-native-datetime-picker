@@ -43,7 +43,7 @@ public class MainActivity extends Activity implements DefaultHardwareBackBtnHand
       .setBundleAssetName("index.android.bundle")
       .setJSMainModuleName("index.android")
       .addPackage(new MainReactPackage())
-      .addPackage(new RCTDateTimePickerPackage())              // <------ add here
+      .addPackage(new RCTDateTimePickerPackage(this))              // <------ add here
       .setUseDeveloperSupport(BuildConfig.DEBUG)
       .setInitialLifecycleState(LifecycleState.RESUMED)
       .build();
@@ -63,11 +63,13 @@ public class MainActivity extends Activity implements DefaultHardwareBackBtnHand
 ![image](https://github.com/remobile/react-native-datetime-picker/blob/master/screencasts/ios/1.png)
 ![image](https://github.com/remobile/react-native-datetime-picker/blob/master/screencasts/ios/2.png)
 ![image](https://github.com/remobile/react-native-datetime-picker/blob/master/screencasts/ios/3.png)
+![image](https://github.com/remobile/react-native-datetime-picker/blob/master/screencasts/ios/4.png)
 <br>
 * android
 <br>
 ![image](https://github.com/remobile/react-native-datetime-picker/blob/master/screencasts/android/1.png)
 ![image](https://github.com/remobile/react-native-datetime-picker/blob/master/screencasts/android/2.png)
+![image](https://github.com/remobile/react-native-datetime-picker/blob/master/screencasts/android/3.png)
 
 
 ## Usage
@@ -77,6 +79,7 @@ use as follows:
 ...
 this.picker.showDatePicker(...)
 this.picker.showTimePicker(...)
+this.picker.showDateTimePicker(...)
 ```
 * on ios, make sure <DateTimePicker> must on topest view
 
@@ -113,6 +116,12 @@ module.exports = React.createClass({
             this.setState({date:d});
         });
     },
+    showDateTimePicker() {
+        var date = this.state.date;
+        this.picker.showDateTimePicker(date, (d)=>{
+            this.setState({date:d});
+        });
+    },
     render() {
         return (
             <View style={styles.container}>
@@ -123,6 +132,8 @@ module.exports = React.createClass({
                 <Button onPress={this.showDatePicker}>showDatePicker</Button>
                 <View style={{height:40}} />
                 <Button onPress={this.showTimePicker}>showTimePicker</Button>
+                <View style={{height:40}} />
+                <Button onPress={this.showDateTimePicker}>showDateTimePicker</Button>
                 <DateTimePicker ref={(picker)=>{this.picker=picker}}/>
             </View>
         );
@@ -142,6 +153,7 @@ var styles = StyleSheet.create({
 
 * showDatePicker(date, callback(date))
 * showTimePicker(date, callback(date))
+* showDateTimePicker(date, callback(date))
 
 ### Caution
 * don't need set any props for <DateTimePicker>
