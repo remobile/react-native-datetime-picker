@@ -63,13 +63,13 @@ public class MainActivity extends Activity implements DefaultHardwareBackBtnHand
 ![image](https://github.com/remobile/react-native-datetime-picker/blob/master/screencasts/ios/1.png)
 ![image](https://github.com/remobile/react-native-datetime-picker/blob/master/screencasts/ios/2.png)
 ![image](https://github.com/remobile/react-native-datetime-picker/blob/master/screencasts/ios/3.png)
-![image](https://github.com/remobile/react-native-datetime-picker/blob/master/screencasts/ios/4.png)
+![image](https://github.com/cnjon/react-native-datetime-picker/blob/master/screencasts/ios/4.png)
 <br>
 * android
 <br>
 ![image](https://github.com/remobile/react-native-datetime-picker/blob/master/screencasts/android/1.png)
 ![image](https://github.com/remobile/react-native-datetime-picker/blob/master/screencasts/android/2.png)
-![image](https://github.com/remobile/react-native-datetime-picker/blob/master/screencasts/android/3.png)
+![image](https://github.com/cnjon/react-native-datetime-picker/blob/master/screencasts/android/3.png)
 
 
 ## Usage
