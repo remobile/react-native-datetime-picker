@@ -17,7 +17,6 @@ var {
 } = React;
 
 var Overlay = require('./overlay.js');
-var Button = require('@remobile/react-native-simple-button');
 
 module.exports =  React.createClass({
     getInitialState() {
@@ -76,9 +75,9 @@ module.exports =  React.createClass({
                         style = {styles.datePicker}
                         />
                     <View style={styles.separator}/>
-                    <Button
+                    <Text
                         onPress={this.onComplete}
-                        style={styles.button}>完成</Button>
+                        style={styles.button}>完成</Text>
                     <TouchableOpacity
                         style={styles.touchableOpacity}
                         activeOpacity={1}
