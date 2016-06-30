@@ -10,6 +10,8 @@ npm install @remobile/react-native-datetime-picker --save
 * not need install, on ios use js write
 
 ### Installation (Android)
+
+* In `android/settings.gradle`
 ```gradle
 ...
 include ':react-native-datetime-picker'
