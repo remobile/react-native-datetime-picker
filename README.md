@@ -1,4 +1,4 @@
-# React Native FileTransfer (remobile)
+# React Native Datetime Picker (remobile)
 A datetime-picker for react-native support for android and ios
 
 ## Installation
