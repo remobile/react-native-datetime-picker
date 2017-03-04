@@ -33,4 +33,10 @@ public class RCTDateTimePicker extends ReactContextBaseJavaModule {
         DialogFragment timePicker = new TimePicker(options, callback);
         timePicker.show(activity.getFragmentManager(), "timePicker");
     }
+
+    @ReactMethod
+    public void showDateTimePicker(ReadableMap options, Callback callback) {
+        DialogFragment datetimePicker = new DateTimePicker(options, callback);
+        datetimePicker.show(activity.getFragmentManager(), "datetimePicker");
+    }
 }

@@ -14,6 +14,7 @@ var {
     TouchableOpacity,
     Navigator,
     Text,
+    Dimensions
 } = React;
 
 var Overlay = require('./overlay.js');
@@ -29,20 +30,30 @@ module.exports =  React.createClass({
     },
     showDatePicker(date, callback) {
         this.callback = callback;
-        date = date || new Date();
+        date = (date || new Date());
 
         this.setState({
             mode: 'date',
             visible: true,
-            date: date,
+            date: new Date(),
         });
     },
     showTimePicker(date, callback) {
         this.callback = callback;
-        date = date || new Date();
+        date = (date || new Date());
 
         this.setState({
             mode: 'time',
+            visible: true,
+            date: date,
+        });
+    },
+    showDateTimePicker(date, callback) {
+        this.callback = callback;
+        date = (date || new Date());
+
+        this.setState({
+            mode: 'datetime',
             visible: true,
             date: date,
         });
@@ -59,6 +70,8 @@ module.exports =  React.createClass({
         this.callback(this.state.date);
     },
     onDateChange(date) {
+        console.log('onDateChange');
+        console.log(date);
         this.setState({date: date});
     },
     render() {
@@ -89,10 +102,11 @@ module.exports =  React.createClass({
     },
 });
 
-var sr = app.Screen;
+const Screen = Dimensions.get('window');
+
 var styles = StyleSheet.create({
     actionSheetContainer: {
-        height: sr.h-Navigator.NavigationBar.Styles.General.TotalNavHeight,
+        height: Screen.height-Navigator.NavigationBar.Styles.General.TotalNavHeight,
         justifyContent: "center",
         backgroundColor: 'rgba(0, 0, 0, 0.5)',
     },
