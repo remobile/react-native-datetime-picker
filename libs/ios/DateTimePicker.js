@@ -6,8 +6,8 @@
 */
 'use strict';
 
-var React = require('react-native');
-var {
+const React = require('react-native');
+const {
     StyleSheet,
     View,
     DatePickerIOS,
@@ -16,8 +16,8 @@ var {
     Text,
 } = React;
 
-var Overlay = require('./overlay.js');
-var Button = require('@remobile/react-native-simple-button');
+const Overlay = require('./overlay.js');
+const Button = require('@remobile/react-native-simple-button');
 
 module.exports =  React.createClass({
     getInitialState() {
@@ -89,8 +89,8 @@ module.exports =  React.createClass({
     },
 });
 
-var sr = app.Screen;
-var styles = StyleSheet.create({
+const sr = app.Screen;
+const styles = StyleSheet.create({
     actionSheetContainer: {
         height: sr.h-Navigator.NavigationBar.Styles.General.TotalNavHeight,
         justifyContent: "center",

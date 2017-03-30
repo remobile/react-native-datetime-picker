@@ -5,6 +5,6 @@
 * @flow-weak
 */
 'use strict';
-var DateTimePicker = require('./libs/DateTimePicker.js');
+const DateTimePicker = require('./libs/DateTimePicker.js');
 
 module.exports = DateTimePicker;

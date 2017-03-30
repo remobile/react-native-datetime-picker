@@ -4,8 +4,8 @@
 */
 'use strict';
 
-var React = require('react-native');
-var { Animated, StyleSheet, View, Dimensions} = React;
+const React = require('react-native');
+const { Animated, StyleSheet, View, Dimensions} = React;
 
 const DEFAULT_ANIMATE_TIME = 200;
 
@@ -30,7 +30,7 @@ module.exports = React.createClass({
     }
 });
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
     overlay: {
         top: 0,
         bottom: 0,

@@ -1,19 +1,19 @@
 'use strict';
 
-var React = require('react-native');
-var {
+const React = require('react-native');
+const {
     View,
     NativeModules,
 } = React;
 
-var RCTDateTimePicker= NativeModules.DateTimePicker;
+const RCTDateTimePicker= NativeModules.DateTimePicker;
 
 
 
 module.exports =  React.createClass({
     showDatePicker(date, callback) {
         date = date || new Date();
-        var options = {year:date.getFullYear(), month:date.getMonth(), day:date.getDate()};
+        const options = {year:date.getFullYear(), month:date.getMonth(), day:date.getDate()};
         RCTDateTimePicker.showDatePicker(options, function (year, month, day) {
             date.setFullYear(year);
             date.setMonth(month);
@@ -23,7 +23,7 @@ module.exports =  React.createClass({
     },
     showTimePicker(date, callback) {
         date = date || new Date();
-        var options = {hour:date.getHours(), minute:date.getMinutes()};
+        const options = {hour:date.getHours(), minute:date.getMinutes()};
         RCTDateTimePicker.showTimePicker(options, function (hour, minute) {
             date.setHours(hour);
             date.setMinutes(minute);
