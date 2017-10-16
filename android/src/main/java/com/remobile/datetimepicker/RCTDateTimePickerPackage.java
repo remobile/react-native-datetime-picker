@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import android.app.Activity;
 
 public class RCTDateTimePickerPackage implements ReactPackage {
-	
+
     private Activity activity;
 	private RCTDateTimePicker mModuleInstance;
 
@@ -32,7 +32,6 @@ public class RCTDateTimePickerPackage implements ReactPackage {
       return modules;
     }
 
-    @Override
     public List<Class<? extends JavaScriptModule>> createJSModules() {
         return Collections.emptyList();
     }
