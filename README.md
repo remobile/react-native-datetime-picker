@@ -43,7 +43,7 @@ public class MainActivity extends Activity implements DefaultHardwareBackBtnHand
       .setBundleAssetName("index.android.bundle")
       .setJSMainModuleName("index.android")
       .addPackage(new MainReactPackage())
-      .addPackage(new RCTDateTimePickerPackage())              // <------ add here
+      .addPackage(new RCTDateTimePickerPackage(this))              // <------ add here
       .setUseDeveloperSupport(BuildConfig.DEBUG)
       .setInitialLifecycleState(LifecycleState.RESUMED)
       .build();
