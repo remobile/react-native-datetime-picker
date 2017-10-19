@@ -1,4 +1,4 @@
-# React Native FileTransfer (remobile)
+# React Native Datetime Picker (remobile)
 A datetime-picker for react-native support for android and ios
 
 ## Installation
@@ -10,6 +10,8 @@ npm install @remobile/react-native-datetime-picker --save
 * not need install, on ios use js write
 
 ### Installation (Android)
+
+* In `android/settings.gradle`
 ```gradle
 ...
 include ':react-native-datetime-picker'
